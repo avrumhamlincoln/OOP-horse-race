@@ -33,7 +33,7 @@ in constructor
         init horse
 ```
 
-# Track.start()
+# Track.start() void
 ```
 keepGoing = true
 whike keepGoing:
@@ -52,26 +52,34 @@ position = 0
 trackLength = 15
 ```
 
-# Horse.init(number, trackLength)
+# Horse.init(number, trackLength) void
 ```
 hNumber = number
 hTrackLength = trackLength
 hPosition = 0
 ```
 
-# Horse.advance()
+# Horse.advance() void
 ```
 flip coin [either 1 or 0]
 
 position += coin
 ```
 
-# Horse.printLane()
+# Horse.printLane() void
 ```
 for 15 times:
     if position = hPosition:
         print number
     else:
         print "."
+```
+
+# Horse.isWinner() bool
+```
+win = false
+if position = trackLength:
+    win = true
+return win
 ```
 
