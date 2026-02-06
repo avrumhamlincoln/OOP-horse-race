@@ -12,5 +12,13 @@ int main(){
 void testHorse(){
 	Horse h;
 	h.init(0, 15);
-	h.printLane();
+	bool keepGoing = true;
+	while (keepGoing){
+		h.advance();
+		h.printLane();
+		if (h.isWinner()){
+			keepGoing = false;
+		}
+	}
+	
 }
