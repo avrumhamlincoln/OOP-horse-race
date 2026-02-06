@@ -11,10 +11,10 @@ Horse::Horse(){
 	Horse::trackLength = 15;
 }
 
-void Horse::init(int number, int trackLength){
+void Horse::init(int number, int TRACK_LENGTH){
 	Horse::number = number;
 	Horse::position = 0;
-	Horse::trackLength = trackLength;
+	Horse::trackLength = TRACK_LENGTH;
 }
 
 void Horse::advance(){
@@ -36,7 +36,7 @@ void Horse::printLane(){
 
 bool Horse::isWinner(){
 	int result = false;
-	if (Horse::position = Horse::trackLength){
+	if (Horse::position == Horse::trackLength){
 		result = true;
 	}
 	return result;
